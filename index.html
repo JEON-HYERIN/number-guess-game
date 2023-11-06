@@ -8,12 +8,16 @@
     <link rel="stylesheet" href="./css/style.css" />
   </head>
   <body>
-    <h1>숫자 맞추기 게임!</h1>
-    <div class="result-area">결과가 나온다</div>
-    <div class="chance-area">남은기회: 5번</div>
-    <input type="number" class="user-input" />
-    <button class="play-button">Go!</button>
-    <button class="reset-button">리셋!</button>
+    <div class="game">
+      <h1>숫자 맞추기 게임!</h1>
+      <p class="game-result">게임 결과</p>
+      <p class="game-status">남은 기회: <span class="game-chance">5번</span></p>
+      <div class="content">
+        <input type="number" class="game-input" />
+        <button type="button" class="play-btn">Go!</button>
+        <button type="button" class="reset-btn">리셋!</button>
+      </div>
+    </div>
 
     <!-- JS -->
     <script src="./js/main.js"></script>
