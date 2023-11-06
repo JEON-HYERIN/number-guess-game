@@ -53,7 +53,7 @@ function play() {
   }
 
   history.push(userValue);
-  console.log(history);
+
   if(chances < 1) {
     gameOver = true;
   }
@@ -64,12 +64,14 @@ function play() {
 }
 
 function reset() {
-  // user input창이 깨끗하게 정리되고
-  userInput.value = '';
-  // 새로운 번호가 생성
-  pickRandomNum();
-
+  pickRandomNum(); // 새로운 번호가 생성
+  userInput.value = ''; // user input창이 깨끗하게 정리되고
   resultArea.textContent = '결과값이 여기 나옵니다';
+  gameOver = false;
+  playButton.disabled = false;
+  chances = 5;
+  chanceArea.textContent = `남은기회: ${chances}번`;
+  history = [];
 }
 
 pickRandomNum();
